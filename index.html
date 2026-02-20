@@ -10,7 +10,7 @@
 margin:0;
 }
 .nav2{
-background:rgb(228, 228, 228);
+background:rgb(255, 255, 255);
   padding:0px;
 }
 .nav2 a{
@@ -31,6 +31,55 @@ padding-left:0;
 }
 .sre{
 font-size:12px;
+}
+.container{
+  display:flex;
+  height:100vh;
+}
+
+/* スレ一覧（サイドバー） */
+.sidebar{
+  width:200px;
+ background: #ebebeb;
+  color:rgb(0, 0, 0);
+  overflow-y:auto;
+border-top:1px solid rgb(182, 182, 182);
+  border-right:1px solid rgb(182, 182, 182);
+}
+
+.sidebar h2{
+  border-bottom:2px solid teal;
+  padding:5px;
+font-size:20px;
+  margin:0;
+  font-weight:500;
+  background:#11111100;
+ 
+}
+
+/* スレ */
+.thread{
+  padding:0px 5px;
+  
+  cursor:pointer;
+}
+
+.thread:hover{
+  background:#bebebe00;
+}
+
+.thread-title{
+text-decoration: none;
+  font-size:14px;
+  margin-bottom:0px;
+}
+
+
+/* メイン */
+.main{
+  flex:1;
+  padding:20px;
+  overflow-y:auto;
 }
 
 </style>
@@ -55,9 +104,36 @@ font-size:12px;
   <a href="#">利用規約</a> 
  <a href="#">開発者</a> 
    <a href="#">shinya-Discord</a> 
-  <a href="#">Gr3njaとは</a> 
+  
 </nav>
+<div class="container">
 
+  <!-- スレ一覧 -->
+  <aside class="sidebar">
+<img src="テンション.png" width="200">
+    <h2>⤵️スレッド一覧</h2>
+
+    <div class="thread">
+      <a href="/" class="thread-title">💻️OS開発について語る</a>
+     
+    </div>
+
+    <div class="thread">
+      <a href="/" class="thread-title">🖥️自作CPU設計</a>
+      
+    </div>
+
+    
+
+  </aside>
+
+  <!-- スレ内容 -->
+  <main class="main">
+
+   
+  </main>
+
+</div>
 
 </body>
 </html>
